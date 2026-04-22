@@ -6,7 +6,7 @@ SELECT * FROM sales_data;
 CALCULATE HOW MUCH MICHAEL SPENT ON MOTORCYCLES
 ================================================
 */
-SELECT SUM(priceeach) AS total_spent_on_motorcycles
+SELECT SUM(sales) AS total_spent_on_motorcycles
 FROM sales_data
 WHERE contactfirstname = 'Michael'
 	AND productline = 'motorcycles';
@@ -25,3 +25,7 @@ LIMIT 1; -- limit to 1 result
 SELECT MAX(sales) as highest_sale, dealsize
 FROM sales_data
 WHERE dealsize = 'Small';
+
+-- find the productline Classic cars for Euro Shopping Channel, and add all the money they
+-- have spent on it
+SELECT productline, customer, sales
